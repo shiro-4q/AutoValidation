@@ -25,7 +25,7 @@ public class AutoValidationFilter : IAsyncActionFilter
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
         // 获取所有需要验证的参数
-        var values = context.ActionArguments.Values.Where(v => v != null && v.GetType().IsDefined(typeof(RequiresValidationAttribute), true));
+        var values = context.ActionArguments.Values.Where(v => v != null && v.GetType().IsDefined(typeof(AutoValidationAttribute), true));
         if (context.ActionDescriptor is not ControllerActionDescriptor || !values.Any())
         {
             await next();

@@ -13,7 +13,7 @@ public class AutoValidationDelegateFilter : IAsyncActionFilter
 
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
-        var values = context.ActionArguments.Values.Where(v => v != null && v.GetType().IsDefined(typeof(RequiresValidationAttribute), true));
+        var values = context.ActionArguments.Values.Where(v => v != null && v.GetType().IsDefined(typeof(AutoValidationAttribute), true));
         if (context.ActionDescriptor is not ControllerActionDescriptor || !values.Any())
         {
             await next();

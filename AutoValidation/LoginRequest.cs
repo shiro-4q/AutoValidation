@@ -2,7 +2,7 @@
 
 namespace AutoValidation
 {
-    [RequiresValidation]
+    [AutoValidation]
     public class LoginRequest
     {
         public string Username { get; set; }

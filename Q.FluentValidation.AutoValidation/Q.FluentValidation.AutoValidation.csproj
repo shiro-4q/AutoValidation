@@ -6,11 +6,13 @@
 		<Nullable>enable</Nullable>
 		<PackageId>Q.FluentValidation.AutoValidation</PackageId>
 		<PackageProjectUrl>https://github.com/shiro-4q/AutoValidation</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/shiro-4q/AutoValidation</RepositoryUrl>
 		<Version>1.0.0</Version>
 		<Description>
 			一个基于 ASP.NET Core + FluentValidation 的自动参数校验工具。
 			通过自定义过滤器，在 Controller Action 执行前自动识别带有 [AutoValidation] 特性的模型，并调用对应的 IValidator T 进行校验。
 		</Description>
+		<PackageTags>FluentValidation AutoValidation</PackageTags>
 		<Authors>QW</Authors>
 	</PropertyGroup>
 

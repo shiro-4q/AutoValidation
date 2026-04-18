@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using System.Collections.Concurrent;
 using System.Linq.Expressions;
 
-namespace AutoValidation;
+namespace Q.FluentValidation.AutoValidation;
 
 public class AutoValidationDelegateFilter : IAsyncActionFilter
 {

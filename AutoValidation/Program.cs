@@ -1,5 +1,5 @@
-using AutoValidation;
 using FluentValidation;
+using Q.FluentValidation.AutoValidation;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

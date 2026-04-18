@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Q.FluentValidation.AutoValidation;
 
 namespace AutoValidation
 {

@@ -17,10 +17,9 @@ public class AutoValidationFilter : IAsyncActionFilter
     {
         return _validateMethodCache.GetOrAdd(modelType, t =>
         {
-            return validatorType.GetMethod(nameof(IValidator<>.ValidateAsync), [t, typeof(CancellationToken)])!;
+            return validatorType.GetMethod(nameof(IValidator<object>.ValidateAsync), [t, typeof(CancellationToken)])!;
         });
     }
-
 
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {

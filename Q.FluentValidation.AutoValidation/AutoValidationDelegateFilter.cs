@@ -55,7 +55,7 @@ public class AutoValidationDelegateFilter : IAsyncActionFilter
         var validatorCast = Expression.Convert(validatorObj, validatorType);
         var modelCast = Expression.Convert(modelObj, modelType);
 
-        var validateMethod = validatorType.GetMethod(nameof(IValidator<>.ValidateAsync), [modelType, typeof(CancellationToken)])!;
+        var validateMethod = validatorType.GetMethod(nameof(IValidator<object>.ValidateAsync), [modelType, typeof(CancellationToken)])!;
 
         var call = Expression.Call(
             validatorCast,

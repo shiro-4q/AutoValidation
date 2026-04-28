@@ -16,12 +16,9 @@
 
 ---
 
-## 技术栈
+## 支持版本
 
-- `.NET 10`
-- `C# 14`
-- `ASP.NET Core Web API`
-- `FluentValidation`
+- `.NET 8~.NET 10`
 
 主要依赖（见 `AutoValidation.csproj`）：
 
